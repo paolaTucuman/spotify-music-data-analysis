@@ -10,9 +10,9 @@ Este caso parte de mi trabajo individual en el módulo Herramientas Básicas de 
 
 ## Datos
 
-El docente del módulo entregó `spotify_artists.csv`, con **163.661 registros** y ocho columnas: nombre, artista, año, duración, popularidad, energía, *danceability* y tempo. El archivo abarca **1921–2020**. Hay 871 filas sin artista; se conservan en el cálculo de duración porque el nombre del artista no es necesario para esa pregunta.
+Extraje `spotify_artists.csv` mediante una aplicación de mi cuenta de Spotify Developers durante el módulo. Contiene **163.661 registros** y ocho columnas: nombre, artista, año, duración, popularidad, energía, *danceability* y tempo. El archivo abarca **1921–2020**. Hay 871 filas sin artista; se conservan en el cálculo de duración porque el nombre del artista no es necesario para esa pregunta.
 
-El CSV del curso no está incluido. Quien tenga una copia autorizada puede colocarla en `data/spotify_artists.csv`. [Descripción de los datos y de la API de Spotify](data/README.md).
+El CSV no está incluido. Quien tenga una copia autorizada puede colocarla en `data/spotify_artists.csv`. [Descripción de los datos y de la API de Spotify](data/README.md).
 
 ## Método
 
@@ -46,7 +46,7 @@ La [selección por año](results/top_track_by_year.csv) reúne **41 pistas**, un
 
 ## Mi contribución
 
-El docente entregó los datos de partida. Resolví individualmente las preguntas del módulo; este caso presenta una selección revisada y reproducible de ese trabajo.
+Extraje los datos con mi propia aplicación de la Spotify Web API y resolví individualmente las preguntas del módulo. El [notebook](notebooks/analisis_musical.ipynb) reúne las 20 consultas; el [script](analysis.py) genera los resultados destacados en esta página.
 
 ## Reproducir
 
@@ -59,6 +59,12 @@ python analysis.py
 
 El script guarda `results/duration_by_year.csv`, `results/top_track_by_year.csv` e `images/duration_by_year.png`.
 
+Para recorrer las 20 preguntas, abre el notebook desde la raíz del repositorio y ejecuta las celdas en orden con el mismo CSV:
+
+```powershell
+jupyter lab notebooks/analisis_musical.ipynb
+```
+
 ## Límites
 
-No se conserva el procedimiento exacto con el que se obtuvo el CSV ni su criterio de selección. La popularidad y otras métricas de Spotify pueden cambiar con el tiempo. El análisis usa un archivo histórico entregado en clase y no permite inferir tendencias de todo el catálogo ni establecer causas. Tampoco permite saber si cada año del archivo contiene todas las pistas que se publicaron ese año.
+No se conserva el procedimiento exacto con el que se obtuvo el CSV ni su criterio de selección. La popularidad y otras métricas de Spotify pueden cambiar con el tiempo. El análisis usa una extracción histórica y no permite inferir tendencias de todo el catálogo ni establecer causas. Tampoco permite saber si cada año del archivo contiene todas las pistas que se publicaron ese año.

@@ -2,6 +2,8 @@
 
 El archivo contiene **163.661 registros** y ocho columnas: nombre de la canción, artista, año, duración en milisegundos, popularidad, energía, *danceability* y tempo. Los años abarcan 1921–2020; 871 filas no tienen artista. Estas cifras describen el archivo del ejercicio, no la totalidad del catálogo de Spotify.
 
+Extraje este archivo durante el módulo con una aplicación de mi cuenta de Spotify Developers. No conservo la fecha, la consulta ni el criterio exacto con que se seleccionaron las pistas. El CSV completo no se distribuye en este repositorio.
+
 ## Cómo se obtienen datos similares mediante la API
 
 1. Crear una aplicación en [Spotify for Developers](https://developer.spotify.com/documentation/web-api/tutorials/getting-started) y consultar qué endpoints están disponibles para esa aplicación.
